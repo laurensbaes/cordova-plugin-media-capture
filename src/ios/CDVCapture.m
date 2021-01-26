@@ -273,6 +273,9 @@
         // CDVImagePicker specific property
         pickerController.callbackId = callbackId;
         pickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
+        if (@available(iOS 11.0, *)) {
+            pickerController.videoExportPreset = AVAssetExportPresetPassthrough;
+        }
         [self.viewController presentViewController:pickerController animated:YES completion:nil];
     }
 }

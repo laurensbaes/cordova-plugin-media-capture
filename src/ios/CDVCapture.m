@@ -276,6 +276,7 @@
         if (@available(iOS 11.0, *)) {
             pickerController.videoExportPreset = AVAssetExportPresetPassthrough;
         }
+        pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
         [self.viewController presentViewController:pickerController animated:YES completion:nil];
     }
 }
